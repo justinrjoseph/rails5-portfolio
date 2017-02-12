@@ -1,6 +1,6 @@
 # Rails 5 Portfolio Application
 
-This is a Ruby on Rails 5 application that allows users to create their own portfolios.
+> This is a Ruby on Rails 5 application that allows users to create their own portfolios.
 
 ### Features
 
@@ -9,7 +9,7 @@ This is a Ruby on Rails 5 application that allows users to create their own port
 - Portfolio
 - Drag & drop interface
 
-### Code Example
+### Code Examples
 ```ruby
 def my_method
   puts 'here it is'
