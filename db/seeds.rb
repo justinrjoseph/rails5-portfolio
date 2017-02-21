@@ -1,7 +1,29 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+10.times do |blog|
+  Blog.create!(
+    title: "Blog Post #{blog + 1}",
+    body: 'Eleifend ullam, sapiente porro proident pulvinar, voluptates nemo? Natus minus corrupti. Elit curae wisi morbi, reprehenderit, quo, maecenas, sem error? Tellus euismod sapien imperdiet anim, et vero voluptas fugit voluptas, eget aut debitis, feugiat egestas minus, wisi dicta sagittis! Dis.'
+  )
+end
+
+puts "10 blog posts created"
+
+5.times do |skill|
+  Skill.create!(
+    title: "Rails #{skill}",
+    percent_utilized: 15
+  )
+end
+
+puts "5 skills created"
+
+9.times do |portfolio|
+  Portfolio.create!(
+    title: "Portfolio title: #{portfolio}",
+    subtitle: 'My service',
+    body: 'Eleifend ullam, sapiente porro proident pulvinar, voluptates nemo? Natus minus corrupti. Elit curae wisi morbi, reprehenderit, quo, maecenas, sem error? Tellus euismod sapien imperdiet anim, et vero voluptas fugit voluptas, eget aut debitis, feugiat egestas minus, wisi dicta sagittis! Dis.',
+    image: 'http://placehold.it/600x400',
+    thumbnail: 'http://placehold.it/350x200'
+  )
+end
+
+puts "9 portfolios created"
