@@ -16,9 +16,9 @@ end
 
 puts "5 skills created"
 
-9.times do |portfolio_item|
-  PortfolioItem.create!(
-    title: "Portfolio title: #{portfolio_item}",
+9.times do |portfolio|
+  Portfolio.create!(
+    title: "Portfolio title: #{portfolio}",
     subtitle: 'My service',
     body: 'Eleifend ullam, sapiente porro proident pulvinar, voluptates nemo? Natus minus corrupti. Elit curae wisi morbi, reprehenderit, quo, maecenas, sem error? Tellus euismod sapien imperdiet anim, et vero voluptas fugit voluptas, eget aut debitis, feugiat egestas minus, wisi dicta sagittis! Dis.',
     image: 'http://placehold.it/600x400',
@@ -26,4 +26,4 @@ puts "5 skills created"
   )
 end
 
-puts "9 portfolio items created"
+puts "9 portfolios created"
