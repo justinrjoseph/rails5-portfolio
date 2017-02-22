@@ -7,6 +7,8 @@ class Portfolio < ApplicationRecord
   validates :image, presence: true
   validates :thumbnail, presence: true
   
+  has_many :technologies
+  
   def self.angular
     where(subtitle: 'Angular')
   end
