@@ -1,4 +1,5 @@
 class Portfolio < ApplicationRecord
+  include Placeholder
   after_initialize :set_defaults
   
   validates :title, presence: true
@@ -15,7 +16,7 @@ class Portfolio < ApplicationRecord
   private
   
     def set_defaults
-      self.image ||= 'http://placehold.it/600x400'
-      self.thumbnail ||= 'http://placehold.it/350x200'
+      self.image ||= Placeholder.image_generator(h: '600', w: '400')
+      self.thumbnail ||= Placeholder.image_generator(h: '350', w: '200')
     end
 end
