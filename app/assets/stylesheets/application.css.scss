@@ -133,24 +133,24 @@ body {
 
 @media (min-width: 40em) {
   /* Pull out the header and footer */
-  .masthead {
+  /*.masthead {
     position: fixed;
     top: 0;
   }
   .mastfoot {
     position: fixed;
     bottom: 0;
-  }
+  }*/
   /* Start the vertical centering */
-  .site-wrapper-inner {
+  /*.site-wrapper-inner {
     vertical-align: middle;
-  }
+  }*/
   /* Handle the widths */
-  .masthead,
+  /*.masthead,
   .mastfoot,
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
-  }
+  //}
 }
 
 @media (min-width: 62em) {
@@ -161,4 +161,14 @@ body {
   }
 }
 
-@import 'pages.css';
+/*
+ * Custom styles
+ */
+.card-block {
+  color: black;
+  text-align: left;
+}
+
+.auth-links a {
+  color: black;
+}
