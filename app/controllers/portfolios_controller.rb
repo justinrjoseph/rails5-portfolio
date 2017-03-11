@@ -1,10 +1,10 @@
 class PortfoliosController < ApplicationController
   before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
-  access all: [:show, :index], user: { except: [:new, :create, :edit, :update, :destroy] }, site_admin: :all
+  access all: [:show, :index], user: { except: [:new, :create, :edit, :update, :destroy, :sort] }, site_admin: :all
   layout 'portfolio'
   
   def index
-    @portfolio_items = Portfolio.all
+    @portfolio_items = Portfolio.by_position
   end
   
   def new
@@ -48,6 +48,14 @@ class PortfoliosController < ApplicationController
     respond_to do |format|
       format.html { redirect_to portfolios_path, notice: 'Portfolio item was removed.' }
     end
+  end
+  
+  def sort
+    params[:order].each do |key, value|
+      Portfolio.find(value[:id]).update(position: value[:position])
+    end
+    
+    render nothing: true
   end
   
   private
