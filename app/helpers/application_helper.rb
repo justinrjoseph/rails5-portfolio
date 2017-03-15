@@ -33,6 +33,14 @@ module ApplicationHelper
     ITYViewTool::Renderer.copyright 'Justin Joseph', 'All rights reserved.'
   end
   
+  def alerts
+    alert = (flash[:alert] || flash[:error] || flash[:notice])
+    
+    if alert
+      alert_generator alert
+    end
+  end
+  
   private
   
     def nav_items
@@ -62,5 +70,9 @@ module ApplicationHelper
   
     def active?(path)
       " active" if current_page?(path)
+    end
+    
+    def alert_generator(msg)
+      js add_gritter(msg, title: '', sticky: false)
     end
 end
