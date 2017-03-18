@@ -15,10 +15,10 @@ body {
   padding-bottom: 6rem;
   margin-bottom: 0;
   background-color: #fff;
-}
-
-.jumbotron p:last-child {
-  margin-bottom: 0;
+  
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .jumbotron-heading {
@@ -42,10 +42,10 @@ body {
   padding: .75rem;
   margin-bottom: 2rem;
   border: 0;
-}
-
-.card > img {
-  margin-bottom: .75rem;
+  
+  & > img {
+    margin-bottom: .75rem;
+  }
 }
 
 .card-text {
@@ -55,10 +55,10 @@ body {
 footer {
   padding-top: 3rem;
   padding-bottom: 3rem;
-}
-
-footer p {
-  margin-bottom: .25rem;
+  
+  p {
+    margin-bottom: .25rem;
+  }
 }
 
 // Custom styles
