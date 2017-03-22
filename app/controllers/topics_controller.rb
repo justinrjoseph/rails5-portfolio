@@ -1,4 +1,6 @@
 class TopicsController < ApplicationController
+  before_action :set_widget_topics
+  
   layout 'blog'
   
   def index
@@ -14,4 +16,10 @@ class TopicsController < ApplicationController
       @blogs = @topic.blogs.published.recent.page(params[:page]).per(5)
     end
   end
+  
+  private
+  
+    def set_widget_topics
+      @widget_topics = Topic.with_blogs
+    end
 end
