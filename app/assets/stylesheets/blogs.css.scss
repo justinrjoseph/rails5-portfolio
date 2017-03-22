@@ -197,3 +197,10 @@ h6, .h6 {
 .widget-topic {
   display: block;
 }
+
+.breadcrumb {
+  a {
+    margin: 0 10px;
+    font-size: 1.25em;
+  }
+}

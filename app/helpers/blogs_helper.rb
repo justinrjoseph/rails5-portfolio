@@ -17,6 +17,10 @@ module BlogsHelper
     markdown_to_html.render(txt).html_safe
   end
   
+  def blog_status_color(blog)
+    blog.draft? ? 'color: red;' : 'color: blue;'
+  end
+  
   class CodeRayify < Redcarpet::Render::HTML
     def block_code(code, lang)
       CodeRay.scan(code, lang).div
