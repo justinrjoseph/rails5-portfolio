@@ -9,4 +9,9 @@ class Blog < ApplicationRecord
   
   validates :title, presence: true
   validates :body, presence: true
+  validates :topic_id, presence: true
+  
+  def self.recent
+    order('created_at DESC')
+  end
 end

@@ -1,14 +1,76 @@
-<h1>About Me</h1>
+<div class="app-card-container">
+  <div class="card">
+    <h1>About Me</h1>
 
-<hr>
-
-<div class="row">
-  <div class="col-md-4">
-    <%= image_tag 'profile.jpg', width: 300, alt: 'Profile image' %>
-  </div>
-  <div class="col-md-7 offset-md-1">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, quod, molestiae amet rem cumque illum impedit sequi adipisci vel consectetur est tempore nulla accusamus eos totam saepe inventore consequatur accusantium.</p>
-  
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, vitae, illo, omnis id quisquam quidem at rem aliquam officia iusto alias itaque neque tempore perspiciatis quae magnam reprehenderit quam veniam!</p>
+    <hr>
+    
+    <div class="row">
+      <div class="col-md-4">
+        <%= image_tag 'profile.jpg', width: 300, alt: 'Profile image' %>
+        
+        <div class="skills">
+          <% @skills.each do |skill| %>
+            <div class="skill">
+              <h4><%= skill.title %></h4>
+              
+              <div class="progress">
+                <div
+                  class="progress-bar progresss-bar-striped bg-warning"
+                  role="progressbar"
+                  aria-valuenow="<%= skill.percent_utilized %>"
+                  aria-valuemax="100"
+                  style="width: <%= skill.percent_utilized %>%;">
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-md-7 offset-md-1">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, quod, molestiae amet rem cumque illum impedit sequi adipisci vel consectetur est tempore nulla accusamus eos totam saepe inventore consequatur accusantium.</p>
+      
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, vitae, illo, omnis id quisquam quidem at rem aliquam officia iusto alias itaque neque tempore perspiciatis quae magnam reprehenderit quam veniam!</p>
+        
+        <button
+          class="btn btn-primary"
+          type="button"
+          data-toggle="collapse"
+          data-target="#employment-history"
+          aria-expanded="false"
+          aria-controls="employment-history">
+          Employment History
+        </button>
+        
+        <button
+          class="btn btn-primary"
+          type="button"
+          data-toggle="collapse"
+          data-target="#education"
+          aria-expanded="false"
+          aria-controls="education">
+          Education
+        </button>
+        
+        <div>
+          <div class="collapse" id="employment-history">
+            <div class="card card-block">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, cupiditate, ex pariatur excepturi quidem obcaecati hic facilis aliquam aspernatur optio tempora consequuntur beatae architecto rem officiis molestiae voluptatibus dignissimos vitae?
+            </div>
+            <div class="card card-block">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, ullam, ex, vel sit assumenda perferendis quaerat optio tempore iste quidem consectetur nostrum numquam architecto minima amet! Ipsa, iusto aliquam esse!
+            </div>
+          </div>
+          
+          <div class="collapse" id="education">
+            <div class="card card-block">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, cupiditate, ex pariatur excepturi quidem obcaecati hic facilis aliquam aspernatur optio tempora consequuntur beatae architecto rem officiis molestiae voluptatibus dignissimos vitae?
+            </div>
+            <div class="card card-block">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, ullam, ex, vel sit assumenda perferendis quaerat optio tempore iste quidem consectetur nostrum numquam architecto minima amet! Ipsa, iusto aliquam esse!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -13,7 +13,7 @@
 }
 
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: 'Lato', sans-serif;
   color: #555;
 }
 
@@ -23,7 +23,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Roboto Slab', serif;
   font-weight: normal;
   color: #333;
 }
@@ -177,6 +177,10 @@ h6, .h6 {
 /*
  * Custom Styles
  */
+.blog-nav {
+  margin-bottom: 30px;
+}
+ 
 .social-links li {
   font-size: 3em;
 }
@@ -192,4 +196,19 @@ h6, .h6 {
 
 .comment-name {
   font-weight: 700;
+}
+
+.widget-topic {
+  display: block;
+}
+
+.breadcrumb {
+  a {
+    margin: 0 10px;
+    font-size: 1.25em;
+  }
+}
+
+.blog-source {
+  margin-top: 20px;
 }
