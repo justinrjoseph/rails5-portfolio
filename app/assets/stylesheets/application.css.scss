@@ -203,6 +203,19 @@ body {
   color: white;
 }
 
+.app-card-container {
+  text-align: left;
+  color: black;
+  
+  & > .card {
+    padding: 40px;
+  }
+  
+  a {
+    color: blue;
+  }
+}
+
 .tech-news {
   margin: 20px;
   color: black;
